@@ -5,8 +5,8 @@
 }
 
 body{
-    background: rgb(185,40,103);
-    min-height: 100vh;
+    background: rgb(158,76,190);
+    background: linear-gradient(0deg, rgba(158,76,190,1) 31%, rgba(212,163,115,1) 78%);    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -19,8 +19,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 350px;
+    height: 450px;
+    width: 450px;
     border-radius: 50%;
     border: 10px solid #fff;
     box-shadow: -2px 0px 10px 10px #ddd;
@@ -40,7 +40,6 @@ body{
     position: absolute;
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.01,3.7,0.058,1);
- 
 }
 .Clock .hour, .hr{
     width: 150px;
@@ -79,7 +78,7 @@ body{
     content: "";
     width: 4px;
     height: 100px;
-    background: rgb(32, 165, 253);
+    background: rgb(198, 103, 7);
     border-radius: 6px 6px 0 0;
     position: absolute;
     z-index: 11;
@@ -88,7 +87,24 @@ body{
     content: "";
     width: 3px;
     height: 150px;
-    background: rgba(255, 255, 255, 0.911);
+    background-color:  rgba(158,76,190,1);
     z-index: 12;
     position: absolute;
+}
+
+@media (max-width: 400px) {
+    .Clock{
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
+}
+}
+
+
+@media (max-width: 700px) {
+    .Clock{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+}
 }

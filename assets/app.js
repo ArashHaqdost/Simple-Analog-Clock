@@ -1,5 +1,6 @@
+
 const sec=document.querySelector('.second');
-const min=document.querySelector('.min');
+const min=document.querySelector('.minute');
 const hour=document.querySelector('.hour');
 
 
@@ -8,19 +9,18 @@ const hour=document.querySelector('.hour');
 function setDate(){
 const now = new Date();
 const seconds = now.getSeconds();
-const secondDegree=((seconds/60)*360)+90;
+const secondDegree=(((seconds/60)*360));
 sec.style.transform=`rotate(${secondDegree}deg)`;
-console.log(seconds)
+
 
 const mints= now.getMinutes();
-const minitDegree=((mints)/60)*360+90;
-min.style.transform=`rotate=(${minitDegree}deg)`;
-console.log(mints);
+const minitDegree=(((mints)/60)*360)+ ((seconds/60) * 6);
+min.style.transform=`rotate(${minitDegree}deg)`;
+
 
 const hours= now.getHours();
-const hoursDegree=((mints/12)*360)+90;
-hour.style.transform=`rotate=(${hoursDegree}deg)`;
-console.log(hours);
+const hoursDegree=(30*(hours) + (mints/12)) ;
+hour.style.transform=`rotate(${hoursDegree}deg)`;
 
 }
 
